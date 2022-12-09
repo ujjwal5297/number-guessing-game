@@ -3,22 +3,25 @@ let output = document.getElementById('outputtext');
 
 let Attempts = 3;
 
-let number = [Math.floor(Math.random()*10)];
+let number = [Math.ceil(Math.random()*10)];
 
 attemptID = document.getElementById('Attempts');
 attemptID.innerHTML = `Attempts left : ${Attempts}`;
 
-const startingseconds = 60;
-let time =startingseconds;
+let time = 60;
 
 const countDown = document.getElementById('timer');
 
-setInterval(updateCountDown(), 1000);
 
-function updateCountDown() {
-    countDown.innerHTML = `Time Remaining: ${startingseconds}`;
-    time--;
-}
+function updateCountDown(x) {
+    
+    countDown.innerHTML = `Time Remaining: ${time}`;
+    x-1;
+};
+setInterval(updateCountDown(time), 1000);
+console.log(updateCountDown(time));
+
+
 
 
 btn.addEventListener('click', function(){
