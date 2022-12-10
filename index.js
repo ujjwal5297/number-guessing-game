@@ -3,7 +3,7 @@ let output = document.getElementById('outputtext');
 
 let Attempts = 3;
 
-let number = 2;
+let number = [Math.ceil(Math.random()*10)];
 
 
 
